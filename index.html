@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vidya Puthalapattu - Chartered Accountant | Finance & Valuation | M&A</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      animation: fade-up 1.2s ease-out forwards;
+    }
+    .glass {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(10, 15, 30, 0.65);
+      border: 1px solid rgba(255, 215, 0, 0.12);
+      transition: all 0.35s ease;
+    }
+    .glass:hover {
+      background: rgba(10, 15, 30, 0.8);
+      border-color: rgba(255, 215, 0, 0.25);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #ffd700, #40c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    ::selection {
+      background: #ffd700;
+      color: #0a0f1e;
+    }
+    .orb {
+      animation: gentle-float 20s infinite ease-in-out;
+    }
+    @keyframes gentle-float {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+      50% { transform: translate(80px, -60px) scale(1.08); opacity: 0.55; }
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f1e] text-gray-100 min-h-screen transition-colors duration-500">
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────────────────────────── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-400 py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="#" class="text-3xl font-extrabold tracking-tight gradient-text">
+        VIDYA P
+      </a>
+      <div class="hidden lg:flex items-center gap-10 font-medium">
+        <a href="#about" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">About</a>
+        <a href="#achievements" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Impact</a>
+        <a href="#experience" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Experience</a>
+        <a href="#skills" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Skills</a>
+        <a href="#education" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Education</a>
+        <a href="#contact" class="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Contact</a>
+      </div>
+      <div class="flex items-center gap-5">
+        <button id="themeToggle" class="p-2.5 rounded-full hover:bg-white/10 transition-colors">
+          <i data-lucide="sun" class="w-5 h-5"></i>
+        </button>
+        <a href="https://www.linkedin.com/in/vidyaputhalapattu/" 
+           class="hidden sm:block px-6 py-2.5 rounded-xl bg-gradient-to-r from-yellow-600 to-cyan-600 text-sm font-semibold shadow-lg shadow-yellow-600/30 hover:scale-105 transition-transform">
+          Connect on LinkedIn
+        </a>
+        <button id="menuBtn" class="lg:hidden p-2.5">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#0a0f1e]/95 backdrop-blur-xl flex flex-col items-center justify-center gap-14 text-4xl font-extrabold lg:hidden hidden">
+    <button id="closeMenu" class="absolute top-10 right-10 text-white">
+      <i data-lucide="x" class="w-12 h-12"></i>
+    </button>
+    <a href="#about" onclick="document.getElementById('mobileMenu').classList.add('hidden')">About</a>
+    <a href="#achievements" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Impact</a>
+    <a href="#experience" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Experience</a>
+    <a href="#skills" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Skills</a>
+    <a href="#education" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Education</a>
+    <a href="#contact" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
+  </div>
+
+  <!-- ─── HERO ────────────────────────────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
+    <div class="absolute top-20 left-20 w-[550px] h-[550px] bg-yellow-600/15 rounded-full blur-[140px] orb"></div>
+    <div class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-cyan-600/15 rounded-full blur-[110px] orb" style="animation-delay:7s"></div>
+
+    <div class="container relative z-10 px-6 text-center space-y-12">
+      <div class="inline-flex items-center gap-4 px-7 py-4 rounded-full bg-yellow-600/15 border border-yellow-500/30 text-yellow-300 text-lg font-semibold animate-fade-up">
+        <span class="w-4 h-4 rounded-full bg-cyan-400 animate-ping"></span>
+        Available for full-time Finance roles – July 2026 onward
+      </div>
+
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-none animate-fade-up" style="animation-delay:0.3s">
+        Valuation • M&A<br/>
+        <span class="gradient-text">Financial Modelling • Due Diligence</span>
+      </h1>
+
+      <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed animate-fade-up" style="animation-delay:0.6s">
+        Chartered Accountant (ICAI) | International Master in Finance (EADA) candidate | Ex-KPMG | Specialized in DCF, LBO, cross-border due diligence, risk analysis, and delivering measurable value in corporate finance & advisory.
+      </p>
+
+      <div class="pt-20 animate-bounce">
+        <i data-lucide="chevron-down" class="mx-auto text-gray-500 w-10 h-10"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ───────────────────────────────────────────────────────────────────── -->
+  <section id="about" class="py-40 relative">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="space-y-12 animate-fade-up">
+          <span class="text-yellow-400 font-bold uppercase tracking-widest text-base">Profile</span>
+          <h2 class="text-5xl lg:text-6xl font-black leading-tight">
+            Precision in Finance.<br/>
+            <span class="text-gray-500">Value through Analysis.</span>
+          </h2>
+          <div class="space-y-8 text-gray-300 text-lg leading-relaxed">
+            <p>Chartered Accountant with hands-on experience in financial modelling, valuation (DCF/LBO), due diligence, and cross-border advisory from KPMG and boutique CA firms. Currently pursuing International Master in Finance at EADA Business School (Barcelona), selected for CFA Research Challenge 2026.</p>
+            <p>Proven in translating complex financial data into actionable commercial insights for senior stakeholders, risk mitigation, restructuring support, and performance optimization across healthcare, retail, and other sectors.</p>
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <div class="glass p-8 flex flex-col items-center gap-3 flex-1 min-w-[160px]">
+              <i data-lucide="dollar-sign" class="w-10 h-10 text-yellow-400"></i>
+              <span class="font-black text-4xl">4+</span>
+              <span class="text-sm text-gray-400">Years Experience</span>
+            </div>
+            <div class="glass p-8 flex flex-col items-center gap-3 flex-1 min-w-[160px]">
+              <i data-lucide="award" class="w-10 h-10 text-cyan-400"></i>
+              <span class="font-black text-4xl">Top 100</span>
+              <span class="text-sm text-gray-400">CA Final Rank</span>
+            </div>
+            <div class="glass p-8 flex flex-col items-center gap-3 flex-1 min-w-[160px]">
+              <i data-lucide="trending-up" class="w-10 h-10 text-yellow-400"></i>
+              <span class="font-black text-4xl">18%</span>
+              <span class="text-sm text-gray-400">Avg Performance Lift</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative rounded-3xl overflow-hidden glass aspect-[4/5] flex items-center justify-center animate-fade-up" style="animation-delay:0.4s">
+          <div class="text-center p-12 space-y-8">
+            <i data-lucide="calculator" class="w-24 h-24 mx-auto text-yellow-500 animate-pulse"></i>
+            <h3 class="text-4xl font-black">Analytical Excellence</h3>
+            <p class="text-gray-300 text-xl">Turning numbers into strategic advantage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ACHIEVEMENTS ────────────────────────────────────────────────────────────── -->
+  <section id="achievements" class="py-40 bg-white/[0.03]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-20 space-y-6">
+        <span class="text-yellow-400 font-bold text-base uppercase tracking-widest">Quantified Results</span>
+        <h2 class="text-5xl lg:text-6xl font-black">
+          Measurable <span class="gradient-text">Impact</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="trending-up" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">KPMG</span>
+            <div class="text-6xl font-black gradient-text">18%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Financial Performance Lift</h3>
+            <p class="text-gray-300 text-lg">Through due diligence and risk identification for cross-border clients.</p>
+          </div>
+        </div>
+
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="shield" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">KPMG</span>
+            <div class="text-6xl font-black gradient-text">15%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Reduced Financial Exposure</h3>
+            <p class="text-gray-300 text-lg">Via balance-sheet risk assessment and valuation sensitivities.</p>
+          </div>
+        </div>
+
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="bar-chart-3" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">KPMG</span>
+            <div class="text-6xl font-black gradient-text">10%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">EBITDA Improvement</h3>
+            <p class="text-gray-300 text-lg">From audit insights translated into restructuring recommendations.</p>
+          </div>
+        </div>
+
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="dollar-sign" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">Chandra Mohan</span>
+            <div class="text-6xl font-black gradient-text">19%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Profitability Increase</h3>
+            <p class="text-gray-300 text-lg">Through enhanced financial forecasting and budgeting accuracy.</p>
+          </div>
+        </div>
+
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="percent" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">Sunil Kumar</span>
+            <div class="text-6xl font-black gradient-text">16%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Overall Profitability</h3>
+            <p class="text-gray-300 text-lg">From store-level analysis during retail expansion.</p>
+          </div>
+        </div>
+
+        <div class="glass p-10 group relative overflow-hidden">
+          <div class="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity">
+            <i data-lucide="clock" class="w-16 h-16"></i>
+          </div>
+          <div class="space-y-6 relative z-10">
+            <span class="text-xs font-bold text-yellow-400 uppercase bg-yellow-900/30 px-4 py-2 rounded-full">Various</span>
+            <div class="text-6xl font-black gradient-text">30%</div>
+            <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Efficiency Gains</h3>
+            <p class="text-gray-300 text-lg">Via process streamlining, automation, and engagement improvements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ──────────────────────────────────────────────────────────────── -->
+  <section id="experience" class="py-40">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-20 space-y-6">
+        <span class="text-yellow-400 font-bold text-base uppercase tracking-widest">Career Path</span>
+        <h2 class="text-5xl lg:text-6xl font-black">
+          Professional <span class="gradient-text">Experience</span>
+        </h2>
+      </div>
+
+      <div class="space-y-10">
+
+        <!-- KPMG -->
+        <div class="glass rounded-3xl border-l-4 border-l-yellow-600 overflow-hidden">
+          <button class="w-full text-left p-8 lg:p-10 toggle-btn flex flex-col lg:flex-row lg:items-center justify-between gap-8 group">
+            <div class="flex items-start gap-8">
+              <div class="p-6 rounded-2xl bg-yellow-700/60 text-white">
+                <i data-lucide="building-2" class="w-8 h-8"></i>
+              </div>
+              <div>
+                <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Associate 2 – Audit & Advisory</h3>
+                <p class="text-yellow-400 font-semibold mt-1.5">KPMG GDC</p>
+                <p class="text-gray-400 italic mt-2 text-sm">Bangalore, India • May 2023 – Mar 2024</p>
+              </div>
+            </div>
+          </button>
+          <div class="content hidden px-8 lg:px-12 pb-12 pt-4 border-t border-white/10">
+            <div class="pt-10 grid lg:grid-cols-2 gap-12">
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Key Contributions</h4>
+                <ul class="space-y-5 text-gray-300 text-base">
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Supported financial due diligence and analytical reviews for cross-border Healthcare & Life Sciences clients, identifying risks leading to ~18% financial performance improvement.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Built/reviewed financial analysis schedules, cash-flow drivers, balance-sheet risk assessments, and valuation sensitivities – reduced exposure by ~15%.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Translated audit findings into commercial insights for senior stakeholders, contributing to restructuring and cost-optimization (EBITDA +10%).</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Collaborated with onshore teams to prepare documentation, improving engagement efficiency by 30%.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Focus Areas</h4>
+                <div class="flex flex-wrap gap-3">
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Financial Due Diligence</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Risk & Valuation Analysis</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Cross-Border Advisory</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">EBITDA Optimization</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Stakeholder Reporting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chandra Mohan -->
+        <div class="glass rounded-3xl border-l-4 border-l-yellow-600 overflow-hidden">
+          <button class="w-full text-left p-8 lg:p-10 toggle-btn flex flex-col lg:flex-row lg:items-center justify-between gap-8 group">
+            <div class="flex items-start gap-8">
+              <div class="p-6 rounded-2xl bg-yellow-700/60 text-white">
+                <i data-lucide="building-2" class="w-8 h-8"></i>
+              </div>
+              <div>
+                <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Associate – Audit & Finance</h3>
+                <p class="text-yellow-400 font-semibold mt-1.5">Chandra Mohan & Associates</p>
+                <p class="text-gray-400 italic mt-2 text-sm">Tirupati, India • Jan 2020 – Jul 2021</p>
+              </div>
+            </div>
+          </button>
+          <div class="content hidden px-8 lg:px-12 pb-12 pt-4 border-t border-white/10">
+            <div class="pt-10 grid lg:grid-cols-2 gap-12">
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Key Contributions</h4>
+                <ul class="space-y-5 text-gray-300 text-base">
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Conducted financial audits, identifying $50K+ discrepancies and strengthening controls/accuracy.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Led financial forecasting and budgeting improvements, driving 19% profitability increase.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Automated reporting workflows, reducing documentation time by 2 days and boosting productivity.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Focus Areas</h4>
+                <div class="flex flex-wrap gap-3">
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Statutory & Internal Audit</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Financial Forecasting</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Process Automation</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Budgeting Accuracy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunil Kumar -->
+        <div class="glass rounded-3xl border-l-4 border-l-yellow-600 overflow-hidden">
+          <button class="w-full text-left p-8 lg:p-10 toggle-btn flex flex-col lg:flex-row lg:items-center justify-between gap-8 group">
+            <div class="flex items-start gap-8">
+              <div class="p-6 rounded-2xl bg-yellow-700/60 text-white">
+                <i data-lucide="building-2" class="w-8 h-8"></i>
+              </div>
+              <div>
+                <h3 class="text-3xl font-bold group-hover:text-yellow-300 transition-colors">Analyst – Corporate Finance</h3>
+                <p class="text-yellow-400 font-semibold mt-1.5">Sunil Kumar S & Co</p>
+                <p class="text-gray-400 italic mt-2 text-sm">Chennai, India • Jun 2018 – Dec 2019</p>
+              </div>
+            </div>
+          </button>
+          <div class="content hidden px-8 lg:px-12 pb-12 pt-4 border-t border-white/10">
+            <div class="pt-10 grid lg:grid-cols-2 gap-12">
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Key Contributions</h4>
+                <ul class="space-y-5 text-gray-300 text-base">
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Analyzed profitability for 40+ store apparel chain expansion; identified underperformers → 16% overall profitability improvement.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Developed projections, budgets, scenario analyses for flagship Apple store → 11% cost reduction, 13% EBITDA uplift.</li>
+                  <li class="flex gap-4"><span class="text-yellow-400 mt-1 text-2xl">•</span> Prepared CMA report for $1.2M hospital project, enabling successful debt funding and capital decisions.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-yellow-400 uppercase mb-6 tracking-wider">Focus Areas</h4>
+                <div class="flex flex-wrap gap-3">
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Profitability & Expansion Analysis</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Financial Projections & Scenario Modelling</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">CMA & Funding Reports</span>
+                  <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">Cost & EBITDA Optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ──────────────────────────────────────────────────────────────────── -->
+  <section id="skills" class="py-32 bg-white/[0.02]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 space-y-6">
+        <span class="text-yellow-400 font-bold text-base uppercase tracking-widest">Core Competencies</span>
+        <h2 class="text-5xl lg:text-6xl font-black">
+          Skills <span class="gradient-text">Overview</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-yellow-600/20 rounded-lg text-yellow-400">
+              <i data-lucide="calculator" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Financial Modelling (DCF, LBO)</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-yellow-600/20 rounded-lg text-yellow-400">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Valuation & Sensitivity Analysis</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-yellow-600/20 rounded-lg text-yellow-400">
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Financial Due Diligence</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-yellow-600/20 rounded-lg text-yellow-400">
+              <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Risk & Balance Sheet Analysis</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-cyan-600/20 rounded-lg text-cyan-400">
+              <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Advanced Excel & PowerPoint</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-cyan-600/20 rounded-lg text-cyan-400">
+              <i data-lucide="code" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Python (Finance Applications)</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-cyan-600/20 rounded-lg text-cyan-400">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">Stakeholder Communication</h3>
+          </div>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-cyan-600/20 rounded-lg text-cyan-400">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg">EBITDA & Profitability Optimization</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ───────────────────────────────────────────────────────────────── -->
+  <section id="education" class="py-40">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-20 space-y-6">
+        <span class="text-yellow-400 font-bold text-base uppercase tracking-widest">Academic & Professional</span>
+        <h2 class="text-5xl lg:text-6xl font-black">
+          Education <span class="gradient-text">& Certifications</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+
+        <div class="space-y-12">
+          <div class="glass p-10 rounded-3xl border-l-4 border-l-yellow-600">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-yellow-400 text-base font-bold">2025 – Present</span>
+                <h3 class="text-3xl font-black mt-3">EADA Business School – Barcelona</h3>
+                <p class="text-gray-300 mt-2 text-lg">International Master in Finance</p>
+              </div>
+              <i data-lucide="school" class="w-12 h-12 text-yellow-500/50"></i>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span class="text-xs bg-yellow-600/20 text-yellow-300 px-4 py-2 rounded-lg font-medium">Valuation & M&A</span>
+              <span class="text-xs bg-yellow-600/20 text-yellow-300 px-4 py-2 rounded-lg font-medium">Financial Modelling</span>
+              <span class="text-xs bg-yellow-600/20 text-yellow-300 px-4 py-2 rounded-lg font-medium">Private Equity</span>
+              <span class="text-xs bg-yellow-600/20 text-yellow-300 px-4 py-2 rounded-lg font-medium">Risk Management</span>
+              <span class="text-xs bg-yellow-600/20 text-yellow-300 px-4 py-2 rounded-lg font-medium">CFA Research Challenge 2026</span>
+            </div>
+            <p class="mt-6 text-gray-300">Merit Excellence Scholarship recipient • Peer mentor on finance projects</p>
+          </div>
+
+          <div class="glass p-10 rounded-3xl border-l-4 border-l-cyan-600">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-cyan-400 text-base font-bold">2015 – 2023</span>
+                <h3 class="text-3xl font-black mt-3">Institute of Chartered Accountants of India (ICAI)</h3>
+                <p class="text-gray-300 mt-2 text-lg">Chartered Accountancy</p>
+              </div>
+              <i data-lucide="award" class="w-12 h-12 text-cyan-500/50"></i>
+            </div>
+            <p class="mt-6 text-gray-300">Top 100 nationwide in CA Final • Cleared IPCC as one of two in cohort • CA Foundation with distinction</p>
+          </div>
+        </div>
+
+        <div class="space-y-12">
+          <div class="glass p-10 rounded-3xl border-l-4 border-l-yellow-600">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-yellow-400 text-base font-bold">2015 – 2018</span>
+                <h3 class="text-3xl font-black mt-3">Sri Venkateswara University</h3>
+                <p class="text-gray-300 mt-2 text-lg">Bachelor of Commerce (8.3/10 CGPA)</p>
+              </div>
+              <i data-lucide="book-open" class="w-12 h-12 text-yellow-500/50"></i>
+            </div>
+            <p class="mt-6 text-gray-300">Led Finance & Cultural Clubs • Organized case competitions, TED-style talks, networking • Volunteered in social projects (tree planting, NGO teaching)</p>
+          </div>
+
+          <div class="space-y-8">
+            <h3 class="text-2xl font-bold text-center lg:text-left">Key Certifications</h3>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="glass p-6 rounded-2xl flex items-center gap-4">
+                <i data-lucide="award" class="w-10 h-10 text-yellow-400"></i>
+                <div>
+                  <h4 class="font-bold">McKinsey Forward</h4>
+                  <p class="text-sm text-gray-400">Leadership & Digital Skills</p>
+                </div>
+              </div>
+              <div class="glass p-6 rounded-2xl flex items-center gap-4">
+                <i data-lucide="award" class="w-10 h-10 text-yellow-400"></i>
+                <div>
+                  <h4 class="font-bold">Corporate Finance: Robust Financial Modelling</h4>
+                  <p class="text-sm text-gray-400">LinkedIn Learning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─────────────────────────────────────────────────────────────────── -->
+  <section id="contact" class="py-40 relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-12 order-2 lg:order-1">
+          <div class="text-center lg:text-left space-y-6">
+            <span class="text-yellow-400 font-bold text-base uppercase tracking-widest">Let's Connect</span>
+            <h2 class="text-5xl lg:text-6xl font-black">
+              Ready to Drive <span class="gradient-text">Value</span>
+            </h2>
+            <p class="text-gray-300 text-xl">
+              Open to full-time opportunities in valuation, M&A, corporate finance, private equity, and advisory from July 2026. Spanish student visa holder • Indian citizen.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">Professional Network</p>
+            <div class="flex gap-6">
+              <a href="https://www.linkedin.com/in/vidyaputhalapattu/" target="_blank" rel="noopener noreferrer"
+                 class="p-6 rounded-2xl glass hover:bg-yellow-600/30 transition-colors">
+                <i data-lucide="linkedin" class="w-8 h-8"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="relative rounded-3xl overflow-hidden glass border border-white/10 shadow-2xl shadow-yellow-900/20">
+            <img
+              src="./vidya-puthalapattu-photo.jpg"
+              alt="Vidya Puthalapattu"
+              class="w-full h-auto object-cover aspect-[4/5] transition-transform duration-700 hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-10 opacity-0 hover:opacity-100 transition-opacity">
+              <div>
+                <h3 class="text-3xl font-bold">Vidya Puthalapattu</h3>
+                <p class="text-gray-300 text-lg mt-2">Chartered Accountant | Finance & Valuation Specialist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-yellow-600/10 rounded-full blur-3xl opacity-30"></div>
+  </section>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────────────────────────── -->
+  <footer class="py-20 border-t border-white/10">
+    <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+      © 2026 Vidya Puthalapattu • Chartered Accountant | International Master in Finance<br/>
+      Crafted with precision.
+    </div>
+  </footer>
+
+  <!-- ─── JAVASCRIPT ──────────────────────────────────────────────────────────────── -->
+  <script>
+    lucide.createIcons();
+
+    // Theme toggle (dark/light basic switch)
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('bg-gray-50');
+      document.body.classList.toggle('text-gray-900');
+      const icon = document.querySelector('#themeToggle i');
+      if (document.body.classList.contains('bg-gray-50')) {
+        icon.setAttribute('data-lucide', 'moon');
+      } else {
+        icon.setAttribute('data-lucide', 'sun');
+      }
+      lucide.createIcons();
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 60) {
+        nav.classList.add('backdrop-blur-xl', 'bg-[#0a0f1e]/90', 'border-b', 'border-white/10', 'py-4');
+      } else {
+        nav.classList.remove('backdrop-blur-xl', 'bg-[#0a0f1e]/90', 'border-b', 'border-white/10', 'py-4');
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+    document.getElementById('closeMenu').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('hidden');
+    });
+
+    // Experience accordion toggle
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
